@@ -34,17 +34,15 @@ shinyUI(
                                tags$head(tags$style("#enteredWords{color: darkred;
                                                     font-size: 20px;
                                                     font-style : italic}")),
-                               h5("Hint: Enter your phrase using quotation marks and use only lowercase letters; do not use any punctation marks"),
-                               br(),
-                               h5("Attention: The output is ready, as soon as your input appears completely in the 'what you have entered' field")
-                              
+                               h6("Please note: The prediction is not finished until the phrase you
+                              have entered appears completely in the 'What you have entered' field!")
+                               
               
                               ),
                   mainPanel( 
                    id="mainbar"  ,
                    h2("The predicted next word:"),
-                 textOutput("predictedWord"),
-                 h5("These are propositions how to complete the phrase you have entered: they are based on probabilities"),
+                   textOutput("predictedWord"),
                  tags$head(tags$style("#predictedWord{color:blue;
                                                     font-size: 30px;
                                       font-style : italic}"))
